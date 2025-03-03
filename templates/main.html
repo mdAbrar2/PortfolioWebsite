@@ -98,12 +98,22 @@
 		<!-- top-area End -->
 	
 		<!--welcome-hero start -->
+		<div class="video-container">
+			<video id="myVideo" autoplay loop muted playsinline >
+				<source src="{% static 'videos/portfoliobackground2.mp4' %}" type="video/mp4" id = "videoSource">
+				Your browser does not support the video tag.
+			</video>
+		</div>
+        <div class="content">
+			
+		</div>
+
 		<section id="welcome-hero" class="welcome-hero">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 text-center">
 						<div class="header-text">
-							<h2>hi <span>,</span> i am <br> Abrar <br> developer <span>.</span>   </h2>
+							<h2>Hi <span>,</span> i'm <br> Abrar <br> developer <span>.</span>   </h2>
 							<p>Aspiring python full stack developer</p>
 							<a href="{% static "resumefolder/Myresume.pdf " %}" download>download resume</a>
 						</div><!--/.header-text-->
@@ -117,38 +127,38 @@
 		<!--about start -->
 		<section id="about" class="about">
 			<div class="section-heading text-center">
-				<h2>about me</h2>
+				<h2 id="firstchange">about me</h2>
 			</div>
 			<div class="container">
 				<div class="about-content">
 					<div class="row">
 						<div class="col-sm-6">
-							<div class="single-about-txt">
-								<h3>
-									Hi, I'm Mohammed Abrar, a passionate Python Full Stack Development aspirant.
-								<p>
+							<div class="single-about-txt" >
+								<h3 id="firstchange">
+									Hi, I'm Mohammed Abrar, a passionate aspiring Python Full Stack Developer.
+								<p id="firstchange">
 									Eager to start my journey in the tech industry. As a fresher, I am continuously learning and improving my skills in Python, Django, HTML, CSS, JavaScript, and database management to build dynamic and efficient web applications.
 									I am eager to gain hands-on experience, learn from industry professionals, and contribute to innovative projects. i thrive on solving challenges nd continuously improving my technical skill.
 									I'm open to collaboration, learning opportunities, and exciting tech projects.
 									Feel free to reach out!
 								</p>
 								<div class="row">
-									<div class="col-sm-4">
+									<div class="col-sm-4" >
 										<div class="single-about-add-info">
-											<h3>phone</h3>
-											<p>7259702509</p>
+											<h3 id="firstchange">phone</h3>
+											<p id="firstchange"> 7259702509</p>
 										</div>
 									</div>
 									<div class="col-sm-4">
 										<div class="single-about-add-info">
-											<h3>email</h3>
-											<p>ma5128433@gmail.com</p>
+											<h3 id="firstchange">email</h3>
+											<p id="firstchange">ma5128433@gmail.com</p>
 										</div>
 									</div>
 									<div class="col-sm-4">
 										<div class="single-about-add-info">
-											<h3>website</h3>
-											<p>www.Abrar.com</p>
+											<h3 id="firstchange">website</h3>
+											<p id="firstchange">www.Abrar.com</p>
 										</div>
 									</div>
 								</div>
@@ -290,54 +300,54 @@
 		<section id="skills" class="skills">
 				<div class="skill-content">
 					<div class="section-heading text-center">
-						<h2>skills</h2>
+						<h2 id="firstchange">skills</h2>
 					</div>
 					<div class="container">
 						<div class="row">
 							<div class="col-md-6">
 								<div class="single-skill-content">
 									<div class="barWrapper">
-										<span class="progressText">PYTHON</span>
+										<span class="progressText" id="firstchange">PYTHON</span>
 										<div class="single-progress-txt">
 											<div class="progress ">
 												<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="10" aria-valuemax="100" style="">
 													  
 												</div>
 											</div>
-											<h3>90%</h3>	
+											<h3 id="firstchange">90%</h3>	
 										</div>
 									</div><!-- /.barWrapper -->
 									<div class="barWrapper">
-										<span class="progressText">ORACLE SQL</span>
+										<span class="progressText" id="firstchange">ORACLE SQL</span>
 										<div class="single-progress-txt">
 											<div class="progress ">
 											   <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="10" aria-valuemax="100" style="">
 												    
 											   </div>
 											</div>
-											<h3>85%</h3>	
+											<h3 id="firstchange">85%</h3>	
 										</div>
 									</div><!-- /.barWrapper -->
 									<div class="barWrapper">
-										<span class="progressText">Html 5</span>
+										<span class="progressText" id="firstchange">Html 5</span>
 										<div class="single-progress-txt">
 											<div class="progress ">
 											   <div class="progress-bar" role="progressbar" aria-valuenow="97" aria-valuemin="10" aria-valuemax="100" style="">
 												   
 											   </div>
 											</div>
-											<h3>97%</h3>	
+											<h3 id="firstchange">97%</h3>	
 										</div>
 									</div><!-- /.barWrapper -->
 									<div class="barWrapper">
-										<span class="progressText">Css </span>
+										<span class="progressText" id="firstchange">Css </span>
 										<div class="single-progress-txt">
 											<div class="progress ">
 											   <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="10" aria-valuemax="100" style="">
 												    
 											   </div>
 											</div>
-											<h3>90%</h3>	
+											<h3 id="firstchange">90%</h3>	
 										</div>
 									</div><!-- /.barWrapper -->
 								</div>
@@ -345,47 +355,58 @@
 							<div class="col-md-6">
 								<div class="single-skill-content">
 									<div class="barWrapper">
-										<span class="progressText">JavaScript</span>
+										<span class="progressText" id="firstchange">JavaScript</span>
 										<div class="single-progress-txt">
 											<div class="progress ">
 												<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="10" aria-valuemax="100" style="">
 													
 												</div>
 											</div>
-											<h3>90%</h3>	
+											<h3 id="firstchange">90%</h3>	
 										</div>
 									</div><!-- /.barWrapper -->
 									<div class="barWrapper">
-										<span class="progressText">Responsive design</span>
+										<span class="progressText" id="firstchange">Responsive design</span>
 										<div class="single-progress-txt">
 											<div class="progress ">
 											   <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="10" aria-valuemax="100" style="">
 												    
 											   </div>
 											</div>
-											<h3>85%</h3>	
+											<h3 id="firstchange">85%</h3>	
 										</div>
 									</div><!-- /.barWrapper -->
 									<div class="barWrapper">
-										<span class="progressText"> Django Framework</span>
+										<span class="progressText" id="firstchange"> Django Framework</span>
 										<div class="single-progress-txt">
 											<div class="progress ">
 											   <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="10" aria-valuemax="100" style="">
 													
 											   </div>
 											</div>
-											<h3>70%</h3>	
+											<h3 id="firstchange">70%</h3>	
 										</div>
 									</div><!-- /.barWrapper -->
 									<div class="barWrapper">
-										<span class="progressText">communication</span>
+										<span class="progressText" id="firstchange">React js</span>
+										<div class="single-progress-txt">
+											<div class="progress ">
+											   <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="10" aria-valuemax="100" style="">
+												   
+											   </div>
+											</div>
+											<h3 id="firstchange">60%</h3>	
+										</div>
+									</div><!-- /.barWrapper -->
+									<div class="barWrapper">
+										<span class="progressText" id="firstchange">communication</span>
 										<div class="single-progress-txt">
 											<div class="progress ">
 											   <div class="progress-bar" role="progressbar" aria-valuenow="97" aria-valuemin="10" aria-valuemax="100" style="">
 												   
 											   </div>
 											</div>
-											<h3>97%</h3>	
+											<h3 id="firstchange">97%</h3>	
 										</div>
 									</div><!-- /.barWrapper -->
 								</div>
@@ -400,7 +421,7 @@
 		<!--experience start -->
 		<section id="experience" class="experience">
 			<div class="section-heading text-center">
-				<h2>experience</h2>
+				<h2 id="firstchange">experience</h2>
 			</div>
 			<div class="container">
 				<div class="experience-content">
@@ -411,19 +432,19 @@
 										<div class="row">
 											<div class="col-md-5">
 												<div class="experience-time text-right">
-													<h2>2024 </h2>
-													<h3>Android intern</h3>
+													<h2 id="firstchange">2024 </h2>
+													<h3 id="firstchange">Android intern</h3>
 												</div><!--/.experience-time-->
 											</div><!--/.col-->
 											<div class="col-md-offset-1 col-md-5">
 												<div class="timeline">
 													<div class="timeline-content">
-														<h4 class="title">
+														<h4 class="title" id="firstchange">
 															<span><i class="fa fa-circle" aria-hidden="true"></i></span>
 															Aspire innovations
 														</h4>
 														<br>
-														<p class="description">
+														<p class="description" id="firstchange">
 															Developed a Currency Classifier System, an Android application to identify and classify currencies.
 															Utilized Python, Machine Learning, and Android Development for image recognition and processing.
 															Built a user-friendly Android UI using XML and Kotlin/Java.
@@ -440,21 +461,21 @@
 										<div class="row">
 											<div class="col-md-offset-1 col-md-5 experience-time-responsive">
 												<div class="experience-time">
-													<h2>
+													<h2 id="firstchange">
 														<span><i class="fa fa-circle" aria-hidden="true"></i></span>
 														2016 - 2018
 													</h2>
-													<h3>associate design director</h3>
+													{% comment %} <h3 >associate design director</h3> {% endcomment %}
 												</div><!--/.experience-time-->
 											</div><!--/.col-->
 											<div class="col-md-5">
 												<div class="timeline">
 													<div class="timeline-content text-right">
-														<h4 class="title">
+														<h4 class="title" id="firstchange">
 															Personal project
 														</h4>
-														<h5>while Learning React js</h5>
-														<p class="description">
+														<h5 id="firstchange">while Learning React js</h5>
+														<p class="description" id="firstchange">
 															Developed TextUtils, a React-based web application for text manipulation (uppercase, lowercase, word count),
 															Implemented React Hooks (useState) to dynamically update text transformations, Designed a responsive UI using Bootstrap and CSS for an enhanced user experience,
 															Added dark mode functionality using state management for better UI customization.
@@ -464,11 +485,11 @@
 											</div><!--/.col-->
 											<div class="col-md-offset-1 col-md-5 experience-time-main">
 												<div class="experience-time">
-													<h2>
+													<h2 id="firstchange">
 														<span><i class="fa fa-circle" aria-hidden="true"></i></span>
 														2024
 													</h2>
-													<h3> Text utils</h3>
+													<h3 id="firstchange"> Text utils</h3>
 												</div><!--/.experience-time-->
 											</div><!--/.col-->
 										</div>
@@ -480,19 +501,19 @@
 										<div class="row">
 											<div class="col-md-5">
 												<div class="experience-time text-right">
-													<h2>2024 - 2025</h2>
-													<h3>Python full stack trainee</h3>
+													<h2 id="firstchange">2024 - 2025</h2>
+													<h3 id="firstchange">Python full stack trainee</h3>
 												</div><!--/.experience-time-->
 											</div><!--/.col-->
 											<div class="col-md-offset-1 col-md-5">
 												<div class="timeline">
 													<div class="timeline-content">
-														<h4 class="title">
+														<h4 class="title" id="firstchange">
 															<span><i class="fa fa-circle" aria-hidden="true"></i></span>
 															python full stack training
 														</h4>
-														<h5>Pyspiders</h5>
-														<p class="description">
+														<h5 id="firstchange">Pyspiders</h5>
+														<p class="description" id="firstchange">
 															Completed hands-on training in Python, Django, SQL, JavaScript, HTML, and CSS to build dynamic web applications,
 															Developed a strong foundation in Python programming, including OOPs concepts, file handling, and exception handling,
 															Learned HTML, CSS, and JavaScript to design interactive and responsive web pages,
@@ -715,7 +736,7 @@
 		<section id="portfolio" class="portfolio">
 			<div class="portfolio-details">
 				<div class="section-heading text-center">
-					<h2>portfolio</h2>
+					<h2 id="firstchange">portfolio</h2>
 				</div>
 				<div class="container">
 					<div class="portfolio-content">
@@ -880,8 +901,8 @@
 		<footer id="footer-copyright" class="footer-copyright">
 			<div class="container">
 				<div class="hm-footer-copyright text-center">
-					<p>
-						&copy; copyright Mohammed Abrar. design and developed by <a href="https://www.themesine.com/">Mohammed Abrar</a>
+					<p id="firstchange">
+						&copy; copyright Mohammed Abrar. design and developed by <a href="#" id="firstchange">Mohammed Abrar</a>
 					</p><!--/p-->
 				</div><!--/.text-center-->
 			</div><!--/.container-->
@@ -899,6 +920,11 @@
 		<!-- Include all js compiled plugins (below), or include individual files as needed -->
 
 		{% comment %} <script src = "{% static "js/visitorform.js" %}"></script> {% endcomment %}
+
+
+		{% comment %} backgroundchange script link {% endcomment %}
+
+		<script src="{% static "js/backgroundchange.js" %}"></script>
 
 		<script src="{% static "js/jquery.js" %}"></script>
         

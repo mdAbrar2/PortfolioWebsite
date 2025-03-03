@@ -25,6 +25,18 @@ font-family: 'Poppins', sans-serif;
 /*-------------------------------------
 		1.General css (Reset code)
 --------------------------------------*/
+
+/* mychanges-start*/
+
+#firstchange{
+    color: white !important;
+}
+
+
+
+
+
+
 *{
     padding: 0;
     margin: 0;
@@ -56,7 +68,7 @@ a,a:hover,a:active,a:focus {
 }
 h1,h2,h3,h4,h5,h6 { 
 	margin: 0;
-	color:#43485c;
+	color:#8c95b7;
     font-size: 16px;
 	font-family: 'Poppins', sans-serif;
 	text-transform: capitalize;
@@ -190,18 +202,56 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
     align-items: center;
     justify-content: center;
     position:relative;
-    background:url(https://images.unsplash.com/photo-1510936111840-65e151ad71bb?q=80&w=2090&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)no-repeat;
+    /* background:url(https://images.unsplash.com/photo-1510936111840-65e151ad71bb?q=80&w=2090&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)no-repeat; */
     background-size:contain;
     background-position: center;
+    /* height:100%; */
     height:890px;
+    width: 100%;
+    top: 0px;
+    bottom: 50px;
+    /* flex-wrap: nowrap; */
 }
+
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Place behind other content */
+}
+
+.video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    bottom: 50px;
+    /* background-color: #999fb3; */
+}
+
 .welcome-hero:before{
     position:absolute;
     content: " ";
     top:0;
     left:0;
     background:rgba(31,44,108,.65);
-    background-image: url();
     width:100%;
     height:100%;
 }
