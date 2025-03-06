@@ -24,10 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-2mwv34(4%-8r8rs+rz^18c15l(-sg_1vpm_k+(7(f$r4*t21jf'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+# DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['my-project.vercel.app', 'localhost']
-# ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['your-vercel-project-name.vercel.app', '127.0.0.1', 'localhost']
+
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -41,14 +43,29 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+
+#  initial settings
+# MIDDLEWARE = [
+#     'django.middleware.security.SecurityMiddleware',
+#     'django.contrib.sessions.middleware.SessionMiddleware',
+#     'django.middleware.common.CommonMiddleware',
+#     'django.middleware.csrf.CsrfViewMiddleware',
+#     'django.contrib.auth.middleware.AuthenticationMiddleware',
+#     'django.contrib.messages.middleware.MessageMiddleware',
+#     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+# ]
+
+# changed settings
+
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",  # Add this
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
 ROOT_URLCONF = 'mywebsite.urls'
@@ -119,13 +136,39 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
 
-# Use STATICFILES_DIRS only in development
+# modified code
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Static files settings
+STATIC_URL = "/static/"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+
 if DEBUG:
-    STATICFILES_DIRS = [BASE_DIR / 'static']
-else:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]  # Keep this for local development
+
+
+
+
+
+
+
+# initial code
+# STATIC_URL = 'static/'
+
+
+
+# # Keep your original STATICFILES_DIRS setting for development
+# if DEBUG:
+#     STATICFILES_DIRS = [BASE_DIR / 'static']
+# else:
+#     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# # Ensure STATICFILES_STORAGE is set for production
+# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
