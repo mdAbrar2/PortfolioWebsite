@@ -30,7 +30,10 @@ DEBUG = False
 # ALLOWED_HOSTS = ['your-vercel-project-name.vercel.app', '127.0.0.1', 'localhost']
 import os
 
-ALLOWED_HOSTS = ['your-vercel-project-name.vercel.app', '127.0.0.1']
+ALLOWED_HOSTS = ['portfolio-website.vercel.app', '127.0.0.1']
+
+
+
 
 
 # ALLOWED_HOSTS = ['*']
