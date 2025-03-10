@@ -1,4 +1,4 @@
-from mywebsite.wsgi import application  # Import your WSGI app
+# from mywebsite.wsgi import application  # Import your WSGI app
 
-# Vercel expects an "app" variable to serve the application
-app = application
+# # Vercel expects an "app" variable to serve the application
+# app = application
