@@ -53,28 +53,28 @@ INSTALLED_APPS = [
 
 
 #  initial settings
-MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-]
+# MIDDLEWARE = [
+#     'django.middleware.security.SecurityMiddleware',
+#     'django.contrib.sessions.middleware.SessionMiddleware',
+#     'django.middleware.common.CommonMiddleware',
+#     'django.middleware.csrf.CsrfViewMiddleware',
+#     'django.contrib.auth.middleware.AuthenticationMiddleware',
+#     'django.contrib.messages.middleware.MessageMiddleware',
+#     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+# ]
 
 # changed settings
 
-# MIDDLEWARE = [
-#     "django.middleware.security.SecurityMiddleware",
-#     "whitenoise.middleware.WhiteNoiseMiddleware",  # Add this
-#     "django.contrib.sessions.middleware.SessionMiddleware",
-#     "django.middleware.common.CommonMiddleware",
-#     "django.middleware.csrf.CsrfViewMiddleware",
-#     "django.contrib.auth.middleware.AuthenticationMiddleware",
-#     "django.contrib.messages.middleware.MessageMiddleware",
-#     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-# ]
+MIDDLEWARE = [
+    "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",  # Add this
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
+]
 
 ROOT_URLCONF = 'mywebsite.urls'
 
@@ -151,13 +151,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Static files settings
 STATIC_URL = "/static/"
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+# STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
-if DEBUG:
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]  # Keep this for local development
+# if DEBUG:
+#     STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]  # Keep this for local development
 
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 
@@ -175,7 +175,7 @@ if DEBUG:
 #     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # # Ensure STATICFILES_STORAGE is set for production
-# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
 # Default primary key field type
