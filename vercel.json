@@ -3,13 +3,24 @@
   "builds": [
     {
       "src": "build_files.sh",
-      "use": "@vercel/static"
+      "use": "@vercel/bash"
+    },
+    {
+      "src": "api/index.py",
+      "use": "@vercel/python",
+      "config": {
+        "runtime": "python3.11"
+      }
     }
   ],
   "routes": [
     {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
       "src": "/(.*)",
-      "dest": "manage.py"
+      "dest": "api/index.py"
     }
   ]
 }
