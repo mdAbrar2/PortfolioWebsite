@@ -36,8 +36,8 @@ DEBUG = True
 
 
 
-ALLOWED_HOSTS = ['*']
-# ALLOWED_HOSTS = ['.vercel.app']
+# ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.vercel.app','.now.sh','127.0.0.1','localhost']
 
 
 # Application definition
@@ -147,15 +147,21 @@ USE_TZ = True
 
 # modified code
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Static files settings
 STATIC_URL = "/static/"
+STATICFILES_DIRS = os.path.join(BASE_DIR,'static'),
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles_build','static')
+
+
+# MEDIA_URL = "images/"
+# MEDIA_ROOT = BASE_DIR/
 # STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
-if DEBUG:
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]  # Keep this for local development
+# if DEBUG:
+#     STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]  # Keep this for local development
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
