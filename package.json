@@ -1,0 +1,6 @@
+{
+    "scripts": {
+      "postinstall": "bash build_files.sh"
+    }
+  }
+  
