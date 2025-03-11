@@ -2,10 +2,6 @@
   "version": 2,
   "builds": [
     {
-      "src": "build_files.sh",
-      "use": "@vercel/bash"
-    },
-    {
       "src": "api/index.py",
       "use": "@vercel/python",
       "config": {
@@ -24,3 +20,4 @@
     }
   ]
 }
+
